@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tugas</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+		const celciusToFahrenheit = (celcius) => {
+			let result = (9/5 * celcius) + 32
+			return `${celcius} derajat celcius = ${result} fahrenheit`
+		}
+
+		const fahrenheitToCelcius = (fahrenheit) => {
+			let result = 5/9 * (fahrenheit - 32)
+			return `${fahrenheit} fahrenheit = ${result} derajat celcius`
+		}
+
+		const timeToSecond = (jamP, menitP, detikP) => {
+			let jam = jamP * 3600
+			let menit = menitP * 60
+			let detik = detikP
+			let result = jam + menit + detik
+			return `${jamP} jam ${menitP} menit ${detikP} detik = ${result} detik`
+		}
+
+		const cekTahunKabisat = (tahun) => {
+			let result = tahun % 4
+
+			if (result == 0) {
+				return `tahun ${tahun} adalah tahun kabisat`
+			} else {
+				return `tahun ${tahun} adalah bukan tahun kabisat`
+			}
+		}	
+
+		document.write('Soal nomor 1 : <br>')
+		document.write(celciusToFahrenheit(32))
+		document.write('<br><br>Soal nomor 2 : <br>')
+		document.write(fahrenheitToCelcius(89.6))
+		document.write('<br><br>Soal nomor 3 : <br>')
+		document.write(timeToSecond(1, 30, 0))
+		document.write('<br><br>Soal nomor 4 : <br>')
+		document.write(cekTahunKabisat(2004))
+	</script>
+</body>
+</html>
