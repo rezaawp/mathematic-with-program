@@ -14,6 +14,11 @@ Contoh : Perhantikan data pada tabel berikut :
 Nilai rataan pada tabel tersebut adalah ?
 */
 
+/**
+ * Rumus : 
+ * @see login as a rezaaawp@gmail.com  {@link https://file.notion.so/f/s/6f770b0a-7bed-4afe-ac3a-d9b810e03c7c/Screenshot_20230801-152435.png?id=98c1f5a7-2550-4d94-b87f-b2ba0f4576ff&table=block&spaceId=a812de81-f628-4821-8dd9-4801d0a8d035&expirationTimestamp=1691193600000&signature=4ftf05X5-R_jZw-8kXW2EWhYvsCI5Nn6Cs6SC24QSkQ&downloadName=Screenshot_20230801-152435.png}
+ */
+
 const dataTunggal = [
   4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7,
   7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8,
