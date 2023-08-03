@@ -1,5 +1,9 @@
 const _ = require("lodash");
 
+/**
+ * 1. MEAN DATA TUNGGAL
+ */
+
 /*
 Contoh : Perhantikan data pada tabel berikut :
 ┌─────────┬───────┬──────────┐
