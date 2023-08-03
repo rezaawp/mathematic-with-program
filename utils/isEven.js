@@ -1,5 +1,5 @@
-const isEvent = (num) => {
+const isEven = (num) => {
   return num % 2 === 0;
 };
 
-module.exports = isEvent;
+module.exports = isEven;
