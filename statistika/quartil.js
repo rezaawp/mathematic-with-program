@@ -4,7 +4,10 @@ const _ = require("lodash");
 
 const isEven = require("../utils/isEven");
 
-const dataMentah = [10, 15, 15, 15, 20, 25, 30, 45, 50, 55, 57, 60, 80, 89];
+const dataMentah = [
+  10, 15, 15, 15, 20, 25, 30, 45, 50, 55, 57, 60, 80, 89, 60, 34, 12, 12, 1, 1,
+  1, 1,
+];
 
 const data = dataMentah.sort((a, b) => a - b);
 
@@ -57,3 +60,5 @@ if (!isEven(dataCount)) {
 console.log("q1 tunggal = ", q1);
 console.log("q2 tunggal = ", q2);
 console.log("q3 tunggal = ", q3);
+
+// Kuartil data kelompok
