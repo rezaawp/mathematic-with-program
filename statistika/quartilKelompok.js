@@ -56,7 +56,6 @@ console.log({ patokanPosisiQ1, patokanPosisiQ2, patokanPosisiQ3 });
 
 for (let i = 0; i < dataKelompok.length; i++) {
   const element = dataKelompok[i];
-  const kelas = element.nilai.split("-");
 
   if (!kelasQ1 && element.frekuensiKumlatif > patokanPosisiQ1) {
     kelasQ1 = dataKelompok[i];
@@ -85,6 +84,7 @@ panjangKelas =
   parseInt(kelasQ1.nilai.split("-")[0]) +
   1;
 
+// rumus hasil quartil dibawah ini tidak di khususkan untuk data nilai yang desimal !
 Q1 =
   parseInt(kelasQ1.nilai.split("-")[0]) -
   0.5 +
