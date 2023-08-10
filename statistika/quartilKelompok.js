@@ -6,6 +6,10 @@
  * @example 100 - 103
  */
 
+/**
+ * Penghitungan quatil kelompok ini si khususkan untuk yang nilai frekuensi nya tidak ada desimal !
+ */
+
 const dataKelompok = [
   { nilai: "31-36", frekuensi: 6 },
   { nilai: "37-42", frekuensi: 4 },
