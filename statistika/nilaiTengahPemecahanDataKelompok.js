@@ -80,5 +80,7 @@ const dataKelompok = [
 // console.log("Persentil ke 65 : ", test(dataKelompok, 65, 100));
 
 // jika data mencari nilai qurtil -1 dan persentil kurang dari 10
-// console.log("Quartil ke 2 : ", test(dataKelompok, 2, 4));
-console.log("Persentil dari 10 : ", test(dataKelompok, 80, 100));
+console.log("Quartil ke 2 : ", test(dataKelompok, 2, 4));
+console.log("Desil ke 5 : ", test(dataKelompok, 5, 10));
+console.log("Persentil ke 50 : ", test(dataKelompok, 50, 100));
+// console.log("Persentil dari 10 : ", test(dataKelompok, 80, 100));

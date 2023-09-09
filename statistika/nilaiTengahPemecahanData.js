@@ -1,5 +1,10 @@
-const dataMentah = [5, 6, 6, 6, 7, 8, 8, 9, 10, 12, 11, 13];
+const _ = require("lodash");
 
+const dataMentah = [32, 35, 33, 32, 35, 36, 34, 35];
+
+for (let i = 0; i < dataMentah.length; i++) {
+  // const element = dataMentah[i];
+}
 console.log({ pDataMentah: dataMentah.length });
 
 function nilaiTengahPemecahanData(i, bagi) {
@@ -17,6 +22,7 @@ function nilaiTengahPemecahanData(i, bagi) {
 }
 
 const test = nilaiTengahPemecahanData;
+console.log("Quartil dari 3 : ", test(3, 4));
 console.log("Quartil dari 1 : ", test(1, 4));
 console.log("Desil dari 9 : ", test(9, 10));
 console.log("Persentil dari 50", test(50, 100));
