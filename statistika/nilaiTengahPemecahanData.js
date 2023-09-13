@@ -1,13 +1,10 @@
 const _ = require("lodash");
 
-const dataMentah = [32, 35, 33, 32, 35, 36, 34, 35];
+// const dataMentah = [32, 35, 33, 32, 35, 36, 34, 35];
 
-for (let i = 0; i < dataMentah.length; i++) {
-  // const element = dataMentah[i];
-}
-console.log({ pDataMentah: dataMentah.length });
+// console.log({ pDataMentah: dataMentah.length });
 
-function nilaiTengahPemecahanData(i, bagi) {
+function nilaiTengahPemecahanData(dataMentah, i, bagi) {
   const n = dataMentah.length;
 
   dataMentah.sort((a, b) => a - b);
@@ -21,8 +18,10 @@ function nilaiTengahPemecahanData(i, bagi) {
     : (dataMentah[indexData] + dataMentah[indexData + 1]) / 2;
 }
 
-const test = nilaiTengahPemecahanData;
-console.log("Quartil dari 3 : ", test(3, 4));
-console.log("Quartil dari 1 : ", test(1, 4));
-console.log("Desil dari 9 : ", test(9, 10));
-console.log("Persentil dari 50", test(50, 100));
+// const test = nilaiTengahPemecahanData;
+// console.log("Quartil dari 3 : ", test(3, 4));
+// console.log("Quartil dari 1 : ", test(1, 4));
+// console.log("Desil dari 9 : ", test(9, 10));
+// console.log("Persentil dari 50", test(50, 100));
+
+module.exports = { nilaiTengahPemecahanData };

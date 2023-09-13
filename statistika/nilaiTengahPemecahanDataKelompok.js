@@ -63,16 +63,18 @@ function nilaiTengahPemecahanData(dataKelompok, i, bagi = 4) {
   );
 }
 
-const test = nilaiTengahPemecahanData;
+module.exports = { nilaiTengahPemecahanData };
 
-const dataKelompok = [
-  { nilai: "30-32", frekuensi: 4 },
-  { nilai: "33-35", frekuensi: 5 },
-  { nilai: "36-38", frekuensi: 7 },
-  { nilai: "39-41", frekuensi: 10 },
-  { nilai: "42-44", frekuensi: 8 },
-  { nilai: "45-47", frekuensi: 6 },
-];
+// const test = nilaiTengahPemecahanData;
+
+// const dataKelompok = [
+//   { nilai: "30-32", frekuensi: 4 },
+//   { nilai: "33-35", frekuensi: 5 },
+//   { nilai: "36-38", frekuensi: 7 },
+//   { nilai: "39-41", frekuensi: 10 },
+//   { nilai: "42-44", frekuensi: 8 },
+//   { nilai: "45-47", frekuensi: 6 },
+// ];
 
 // console.log("Desil ke 5 : ", test(dataKelompok, 5, 10));
 // console.log("Quartil ke 2 : ", test(dataKelompok, 2, 4));
@@ -80,7 +82,7 @@ const dataKelompok = [
 // console.log("Persentil ke 65 : ", test(dataKelompok, 65, 100));
 
 // jika data mencari nilai qurtil -1 dan persentil kurang dari 10
-console.log("Quartil ke 2 : ", test(dataKelompok, 2, 4));
-console.log("Desil ke 5 : ", test(dataKelompok, 5, 10));
-console.log("Persentil ke 50 : ", test(dataKelompok, 50, 100));
+// console.log("Quartil ke 2 : ", test(dataKelompok, 2, 4));
+// console.log("Desil ke 5 : ", test(dataKelompok, 5, 10));
+// console.log("Persentil ke 50 : ", test(dataKelompok, 50, 100));
 // console.log("Persentil dari 10 : ", test(dataKelompok, 80, 100));
