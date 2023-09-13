@@ -35,7 +35,7 @@ const simpanganRataTunggal = (data) => {
     const simpanganRata = totalNilaiMutlak / n;
     varians = totalXMinR / (n - 1);
     varians = parseFloat(varians.toFixed(2));
-    return { simpanganRata, varians, rataRata, totalNilai };
+    return { simpanganRata, varians, rataRata, totalNilaiMutlak };
   } catch (e) {
     console.log(e);
     throw e;
@@ -75,4 +75,9 @@ const simpanganBakuTunggal = (data) => {
 };
 
 // console.log(simpanganRataTunggal(dataMentah));
-console.log(simpanganBakuTunggal([8, 7, 10, 11, 4]));
+// console.log(simpanganBakuTunggal([8, 7, 10, 11, 4]));
+
+module.exports = {
+  simpanganBakuTunggal,
+  simpanganRataTunggal,
+};
