@@ -42,8 +42,8 @@ const simpanganRataTunggal = (data) => {
   }
 };
 
-try {
-    const simpanganRataKelompok = () => {
+const simpanganRataKelompok = () => {
+  try {
   } catch (e) {}
 };
 
