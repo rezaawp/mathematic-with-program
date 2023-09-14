@@ -15,7 +15,7 @@ const dataMentah = [7.5, 8.2, 7.8, 4.9, -13.7, 4.8, 3.5, 3.2];
 
 // https://www.quipper.com/id/blog/mapel/matematika/simpangan-rata-rata/
 // https://lmsspada.kemdikbud.go.id/pluginfile.php/538641/mod_imscp/intro/BAB%204%20penyebaran%20data.pdf
-const simpanganRataTunggal = (data) => {
+const simpanganRataTunggal = (data, type = "populasi") => {
   try {
     data = sort(data);
     const rataRata = parseFloat(average(data).toFixed(1));
@@ -31,9 +31,9 @@ const simpanganRataTunggal = (data) => {
 
     totalXMinR = parseFloat(totalXMinR.toFixed(2));
 
-    const n = data.length;
+    const n = type === "sampel" ? data.length - 1 : data.length;
     const simpanganRata = totalNilaiMutlak / n;
-    varians = totalXMinR / (n - 1);
+    varians = totalXMinR / n;
     varians = parseFloat(varians.toFixed(2));
     return { simpanganRata, varians, rataRata, totalNilaiMutlak };
   } catch (e) {
@@ -48,7 +48,7 @@ const simpanganRataKelompok = () => {
 };
 
 // sample data : [1,2,3,4,5,6]
-const simpanganBakuTunggal = (data) => {
+const simpanganBakuTunggal = (data, type = "populasi") => {
   try {
     data = sort(data);
     const rataRata = average(data);
@@ -63,19 +63,30 @@ const simpanganBakuTunggal = (data) => {
       totalNilaiKuadrat += xMinR * xMinR;
     }
 
-    const nilaiN = data.length <= 30 ? data.length - 1 : data.length;
+    const nilaiN = type === "sampel" ? data.length - 1 : data.length;
+    // const nilaiN = data.length;
     let result = totalNilaiKuadrat / nilaiN;
+    const resultSebelumAkarDari = result;
     result = Math.sqrt(result);
 
-    return { totalNilai, totalNilaiKuadrat, result, nilaiN };
+    return {
+      totalNilai,
+      totalNilaiKuadrat,
+      result,
+      nilaiN,
+      resultSebelumAkarDari,
+    };
   } catch (e) {
     console.log(e);
     throw e;
   }
 };
 
-// console.log(simpanganRataTunggal(dataMentah));
-// console.log(simpanganBakuTunggal([8, 7, 10, 11, 4]));
+const data = [32, 35, 33, 32, 35, 36, 34, 35];
+console.log("Simpangan rata", simpanganRataTunggal(data));
+console.log("Simpangan baku", simpanganBakuTunggal(data));
+console.log("median = ", pecahTunggal(data, 5, 10));
+console.log("p 25 = ", pecahTunggal(data, 25, 100));
 
 module.exports = {
   simpanganBakuTunggal,

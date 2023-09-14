@@ -1,6 +1,6 @@
 const _ = require("lodash");
 
-const dataMentah = [32, 35, 33, 32, 35, 36, 34, 35, 32, 32, 32, 32];
+const dataMentah = [32, 35, 33, 32, 35, 36, 34, 35];
 
 console.log(dataMentah.length);
 dataMentah.sort((a, b) => a - b);
