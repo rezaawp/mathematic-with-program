@@ -9,13 +9,24 @@ function nilaiTengahPemecahanData(dataMentah, i, bagi) {
 
   dataMentah.sort((a, b) => a - b);
 
-  const result = (i * (n + 1)) / bagi;
+  let result = (i * (n + 1)) / bagi;
+  result = parseFloat(result.toFixed(2));
 
-  const indexData = Math.floor(result) - 1; // jika data genap
+  const angkaSetelahKoma = result % 1;
 
-  return n % 2 !== 0
-    ? result
-    : (dataMentah[indexData] + dataMentah[indexData + 1]) / 2;
+  const indexData = Math.floor(result) - 1; // dibutuhkan jika data genap
+  const Xiplus1 = dataMentah[indexData + 1];
+  const X = dataMentah[indexData];
+
+  const hasilDataGenap = () => {
+    try {
+      return X + angkaSetelahKoma * (Xiplus1 - X);
+    } catch (e) {
+      console.log("Ada error nich = ", e);
+    }
+  };
+
+  return n % 2 !== 0 ? result : hasilDataGenap();
 }
 
 // const test = nilaiTengahPemecahanData;
